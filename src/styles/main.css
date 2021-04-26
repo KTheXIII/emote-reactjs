@@ -1,0 +1,58 @@
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+
+  background-color: #101010;
+  color: #ececec;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.app-name {
+  display: flex;
+  place-content: center;
+  width: 100%;
+  height:64pt;
+  font-size: 21pt;
+  font-weight: 300;
+}
+
+.app-name p {
+  margin: auto;
+  margin-top: 21pt;
+}
+
+.board {
+  display: grid;
+  height: 100%;
+  place-content: center;
+}
+
+.app-footer {
+  height: 32pt;
+  display: flex;
+  place-content: center;
+}
+
+.app-footer a {
+  text-decoration: none;
+  color: #5a5a5a;
+  font-weight: 300;
+}
+
+.app-footer a:hover {
+  text-decoration: underline;
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #ffffff;
+    color: #000000;
+  }
+}
