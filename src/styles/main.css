@@ -28,10 +28,22 @@ html, body, #root {
   margin-top: 21pt;
 }
 
-.board {
+.emote-container {
   display: grid;
   height: 100%;
   place-content: center;
+}
+
+.emote-container #emote-display {
+  font-size: 42pt;
+}
+
+.emote-container #emote-display:hover {
+  cursor: pointer;
+}
+
+.emote-container #emote-display:active {
+  font-size: 40pt;
 }
 
 .app-footer {
@@ -48,6 +60,16 @@ html, body, #root {
 
 .app-footer a:hover {
   text-decoration: underline;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 }
 
 @media (prefers-color-scheme: light) {
