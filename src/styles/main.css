@@ -25,7 +25,8 @@ html, body, #root {
 
 .app-name p {
   margin: auto;
-  margin-top: 21pt;
+  margin-top: 32pt;
+  color: #252525;
 }
 
 .emote-container {
@@ -35,7 +36,9 @@ html, body, #root {
 }
 
 .emote-container #emote-display {
-  font-size: 42pt;
+  font-size: 48pt;
+  font-family: 'Roboto Mono', monospace;
+  color: #aaaaaa;
 }
 
 .emote-container #emote-display:hover {
@@ -54,7 +57,7 @@ html, body, #root {
 
 .app-footer a {
   text-decoration: none;
-  color: #5a5a5a;
+  color: #252525;
   font-weight: 300;
 }
 

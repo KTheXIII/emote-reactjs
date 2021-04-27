@@ -18,16 +18,22 @@ const emoteList = [
 
 export function Emote(): JSX.Element {
   const [emote, setEmote] = useState('(>_<)')
+  let lastIndex = 0
 
   return (
-    <div className="emote-container">
+    <div className="emote-container"
+      onClick={() => {
+        let i = Math.floor(Math.random() * emoteList.length)
+        if (lastIndex == i) {
+          i = (i < emoteList.length) ? i++ : i--
+          lastIndex = i
+        }
+        setEmote(emoteList[i])
+      }}>
       <p
         id="emote-display"
         className="noselect"
-        onClick={() => {
-          const i = Math.floor(Math.random() * emoteList.length)
-          setEmote(emoteList[i])
-        }}>{emote}</p>
+      >{emote}</p>
     </div>
   )
 }
