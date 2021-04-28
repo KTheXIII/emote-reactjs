@@ -1,7 +1,6 @@
 {
   "name": "random-emote-react",
-  "version": "0.2.0",
-  "homepage": ".",
+  "version": "0.3.0",
   "description": "",
   "main": "app.js",
   "private": true,
@@ -11,8 +10,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "test:eslint": "eslint src/ --ext .ts --ext .js",
-    "clean": "rimraf build/*",
-    "deploy": "gh-pages -d build"
+    "clean": "rimraf build/*"
   },
   "keywords": [],
   "author": "KTheXIII",
