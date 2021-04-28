@@ -41,6 +41,8 @@ export function Emote(props: IEmote): JSX.Element {
           emoteTextRef.current?.setSelectionRange(0, 99999)
           document.execCommand('copy')
           setTool('Copied!')
+
+          emoteTextRef.current?.blur()
         }}
         onMouseOut={() => {
           setTool('Copy')
