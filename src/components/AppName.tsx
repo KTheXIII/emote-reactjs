@@ -1,7 +1,7 @@
 
 interface IAppName {
   title: string
-  titleClicked: (() => void)
+  titleClicked?: (() => void)
 }
 
 export function AppName(props: IAppName): JSX.Element {

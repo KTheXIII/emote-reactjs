@@ -3,7 +3,7 @@ import { AppName } from './components/AppName'
 import { Emote } from './components/Emote'
 import { AppFooter } from './components/AppFooter'
 
-function App(): JSX.Element {
+export function App(): JSX.Element {
   const [randomise, randomEmote] = useState(0)
 
   return (
@@ -23,5 +23,3 @@ function App(): JSX.Element {
     </div>
   )
 }
-
-export default App

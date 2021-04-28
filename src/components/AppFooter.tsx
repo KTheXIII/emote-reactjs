@@ -19,7 +19,6 @@ export function AppFooter(props: IAppFooter): JSX.Element {
         target="_blank"
         href={props.link}
         id="github-link">{props.name}</a>
-
     </div >
   )
 }
