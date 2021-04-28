@@ -41,26 +41,17 @@ export function Emote(props: IEmote): JSX.Element {
           emoteTextRef.current?.setSelectionRange(0, 99999)
           document.execCommand('copy')
           setTool('Copied!')
-
-          if (window.getSelection) {
-            if (window.getSelection()?.empty) {  // Chrome
-              window.getSelection()?.empty()
-            } else if (window.getSelection()?.removeAllRanges) {  // Firefox
-              window.getSelection()?.removeAllRanges()
-            }
-          }
         }}
         onMouseOut={() => {
           setTool('Copy')
         }}>
+        <span id="emote-display" className="noselect">{emote}</span>
         <input
           type="text"
-          id="emote-display"
+          id="emote-copy-input"
           value={emote}
           ref={emoteTextRef}
-          disabled
-          onChange={() => { /* */ }}
-          className="noselect" />
+          onChange={() => { /* */ }} />
         <span
           className="emote-tooltip noselect"
         >{tool}</span>
