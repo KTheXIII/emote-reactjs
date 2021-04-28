@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm install -g pnpm
-      - run: pnpm i
+      - run: pnpm i --frozen-lockfile
         env:
           PUBLIC_PATH: '.'
       - run: pnpm build
