@@ -1,11 +1,18 @@
-html, body, #root {
+:root{
+  --background-dark: #101010;
+  --color-dark: #ececec;
+}
+
+html,
+body,
+#root {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
   height: 100%;
 
-  background-color: #101010;
-  color: #ececec;
+  background-color: var(--background-dark);
+  color: var(--color-dark);
 }
 
 .app {
@@ -23,10 +30,16 @@ html, body, #root {
   font-weight: 300;
 }
 
-.app-name p {
+.app-name 
+.app-title {
   margin: auto;
   margin-top: 32pt;
-  color: #252525;
+  color: #383838;
+}
+
+.app-name
+.app-title:hover {
+  cursor: pointer;
 }
 
 .emote-container {
@@ -35,30 +48,97 @@ html, body, #root {
   place-content: center;
 }
 
-.emote-container #emote-display {
-  font-size: 48pt;
+.emote-container
+.emote-copy
+#emote-display {
+  font-size: 40pt;
+  width: 100%;
+  padding: 0;
   font-family: 'Roboto Mono', monospace;
-  color: #aaaaaa;
+  background-color: var(--background-dark);
+  color: var(--color-dark);
 }
 
-.emote-container #emote-display:hover {
+.emote-container
+.emote-copy
+input[type='text'] {
+  text-align: center;
+  border: none;
+  text-decoration: none;
+  outline: none;
+}
+
+.emote-container
+.emote-copy
+input[type='text']:disabled {
+  color: white !important;
+}
+
+.emote-container
+.emote-copy
+#emote-display:hover {
   cursor: pointer;
 }
 
-.emote-container #emote-display:active {
-  font-size: 40pt;
+.emote-container
+.emote-copy
+#emote-display:active {
+  font-size: 39pt;
+}
+
+.emote-container
+.emote-copy
+.emote-tooltip {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  background-color: #555;
+  left: 50%;
+  text-align: center;
+  width: 60pt;
+  padding: 5pt;
+  border-radius: 5pt;
+  bottom: 54%;
+  z-index: 1;
+  margin-left: -30pt;
+}
+
+.emote-container
+.emote-copy
+.emote-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5pt;
+  border-width: 5pt;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.emote-container
+.emote-copy:hover
+.emote-tooltip {
+  visibility: visible;
+  opacity: 1;
 }
 
 .app-footer {
   height: 32pt;
   display: flex;
+  flex-direction: row;
   place-content: center;
 }
 
-.app-footer a {
+.app-footer a, .app-footer span {
+  margin: auto 0pt;
   text-decoration: none;
-  color: #252525;
+  color: #353535;
   font-weight: 300;
+}
+
+.app-footer span {
+  padding: 0pt 5pt;
 }
 
 .app-footer a:hover {
@@ -67,11 +147,11 @@ html, body, #root {
 
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently
+  -webkit-user-select: none;   /* Safari */
+  -khtml-user-select: none;    /* Konqueror HTML */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
                                   supported by Chrome and Opera */
 }
 

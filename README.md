@@ -2,10 +2,16 @@
 
 ## Requirements
 
-- nodejs
-- pnpm
+- [nodejs](https://nodejs.org/)
+- [pnpm](https://pnpm.io)
 
 ## Development
+
+Install the packages
+
+```
+pnpm i
+```
 
 Run the development server
 

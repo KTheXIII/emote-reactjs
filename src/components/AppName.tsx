@@ -1,7 +1,15 @@
-export function AppName(props: { title: string }): JSX.Element {
+
+interface IAppName {
+  title: string
+  titleClicked: (() => void)
+}
+
+export function AppName(props: IAppName): JSX.Element {
   return (
     <div className="app-name">
-      <p>{props.title}</p>
+      <p className="app-title noselect"
+        onClick={props.titleClicked}
+      >{props.title}</p>
     </div>
   )
 }
