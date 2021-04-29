@@ -39,7 +39,7 @@ export const Emote = forwardRef((props: IEmoteProps, ref: Ref<IEmoteRef>) => {
     id="emote-copy-area"
     value={emote}
     ref={emoteTextRef}
-    onChange={() => { }}
+    onChange={() => { return }}
     rows={24}
     cols={80}>
   </textarea>
