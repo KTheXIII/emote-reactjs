@@ -1,12 +1,19 @@
 import {
   useState,
   useRef,
-  useEffect
+  Ref,
+  useImperativeHandle,
+  forwardRef
 } from 'react'
+
 import emotes from '../assets/emojis.json'
 
-interface IEmote {
-  randomise?: number
+export interface IEmoteProps {
+  title?: string
+}
+
+export interface IEmoteRef {
+  randomEmote: () => void
 }
 
 let lastIndex = 0
@@ -20,15 +27,29 @@ function getRandomEmote() {
   return emoteList[i]
 }
 
-export function Emote(props: IEmote): JSX.Element {
-  const emoteTextRef = useRef<HTMLInputElement | null>(null)
+export const Emote = forwardRef((props: IEmoteProps, ref: Ref<IEmoteRef>) => {
+  const emoteTextRef = useRef<HTMLTextAreaElement | null>(null)
   const [emote, setEmote] = useState(getRandomEmote())
   const [tool, setTool] = useState('Copy')
 
-  useEffect(() => {
-    setEmote(getRandomEmote())
-  }, [props.randomise])
+  useImperativeHandle(ref, () => ({ randomEmote }))
 
+  const [isHidden, setHidden] = useState(true)
+  const copyArea = <textarea
+    id="emote-copy-area"
+    value={emote}
+    ref={emoteTextRef}
+    onChange={() => { }}
+    rows={24}
+    cols={80}>
+  </textarea>
+
+  let copyTimeout: number
+  const copyTimeoutDelay = 10
+
+  const randomEmote = () => {
+    setEmote(getRandomEmote())
+  }
   return (
     <div className="emote-container"
       onKeyPress={e => {
@@ -37,27 +58,31 @@ export function Emote(props: IEmote): JSX.Element {
     >
       <div className="emote-copy"
         onClick={() => {
-          emoteTextRef.current?.select()
-          emoteTextRef.current?.setSelectionRange(0, 99999)
-          document.execCommand('copy')
-          setTool('Copied!')
+          if (!copyTimeout) {
+            setHidden(false)
 
-          emoteTextRef.current?.blur()
+            copyTimeout = window.setTimeout(() => {
+              emoteTextRef.current?.select()
+              emoteTextRef.current?.setSelectionRange(0, 99999)
+              document.execCommand('copy')
+              setTool('Copied!')
+
+              emoteTextRef.current?.blur()
+
+              setHidden(true)
+              clearTimeout(copyTimeout)
+            }, copyTimeoutDelay)
+          }
         }}
         onMouseOut={() => {
           setTool('Copy')
         }}>
         <span id="emote-display" className="noselect">{emote}</span>
-        <input
-          type="text"
-          id="emote-copy-input"
-          value={emote}
-          ref={emoteTextRef}
-          onChange={() => { /* */ }} />
+        {isHidden ? '' : copyArea}
         <span
           className="emote-tooltip noselect"
         >{tool}</span>
       </div>
     </div >
   )
-}
+})

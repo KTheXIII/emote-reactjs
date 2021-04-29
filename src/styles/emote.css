@@ -1,0 +1,98 @@
+.emote-container {
+  display: grid;
+  height: 100%;
+  place-content: center;
+}
+
+.emote-container
+.emote-copy
+#emote-display {
+  font-size: 32pt;
+  width: 100%;
+  padding: 0;
+  font-family: 'Roboto Mono', monospace;
+  color: var(--color-dark);
+}
+
+.emote-container
+.emote-copy
+#emote-copy-area {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+  width: 256pt;
+  height: 128pt;
+  margin-left: -256pt;
+  font-size: 21px;
+}
+
+.emote-container
+.emote-copy
+#emote-display:hover {
+  cursor: pointer;
+}
+
+.emote-container
+.emote-copy
+#emote-display:active {
+  font-size: 39pt;
+}
+
+.emote-container
+.emote-copy
+.emote-tooltip {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  background-color: var(--background-1-dark);
+  left: 50%;
+  text-align: center;
+  width: 60pt;
+  padding: 5pt;
+  border-radius: 5pt;
+  bottom: 54%;
+  z-index: 1;
+  margin-left: -35pt;
+}
+
+.emote-container
+.emote-copy
+.emote-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5pt;
+  border-width: 5pt;
+  border-style: solid;
+  border-color: var(--background-1-dark) transparent transparent transparent;
+}
+
+.emote-container
+.emote-copy:hover
+.emote-tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+@media (prefers-color-scheme: light) {
+  .emote-container
+  .emote-copy
+  #emote-display {
+    color: var(--color-light);
+  }
+
+  .emote-container
+  .emote-copy
+  .emote-tooltip {
+    background-color: var(--background-1-light);
+  }
+
+  .emote-container
+  .emote-copy
+  .emote-tooltip::after {
+    border-color: var(--background-1-light) transparent transparent transparent;
+  }
+
+}

@@ -1,20 +1,19 @@
-import { useState } from 'react'
+import { useRef } from 'react'
 import { AppName } from './components/AppName'
-import { Emote } from './components/Emote'
+import { Emote, IEmoteRef } from './components/Emote'
 import { AppFooter } from './components/AppFooter'
 
 export function App(): JSX.Element {
-  const [randomise, randomEmote] = useState(0)
+  const emoteRef = useRef<IEmoteRef>(null)
 
   return (
     <div className="app">
       <AppName
         title={'./emote'}
-        titleClicked={() => {
-          randomEmote(Math.random())
-        }}
+        titleClicked={() => emoteRef.current?.randomEmote()}
       />
-      <Emote randomise={randomise} />
+      <Emote
+        ref={emoteRef} />
       <AppFooter
         link='https://github.com/KTheXIII'
         name='2021 © KTheXIII'
