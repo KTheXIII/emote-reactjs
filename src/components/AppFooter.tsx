@@ -6,7 +6,7 @@ interface IAppFooter {
 
 export function AppFooter(props: IAppFooter): JSX.Element {
   return (
-    <div className="app-footer">
+    <div className="app-footer noselect">
       <a
         title="Github repository link"
         rel="noreferrer"

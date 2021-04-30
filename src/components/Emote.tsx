@@ -27,12 +27,16 @@ function getRandomEmote() {
   return emoteList[i]
 }
 
-export const Emote = forwardRef((props: IEmoteProps, ref: Ref<IEmoteRef>) => {
+function EmoteComponent(props: IEmoteProps, ref: Ref<IEmoteRef>): JSX.Element {
   const emoteTextRef = useRef<HTMLTextAreaElement | null>(null)
   const [emote, setEmote] = useState(getRandomEmote())
-  const [tool, setTool] = useState('Copy')
+  const [tooltip, setTooltip] = useState('Copy')
 
+  // Bind the randomEmote function
   useImperativeHandle(ref, () => ({ randomEmote }))
+  const randomEmote = () => {
+    setEmote(getRandomEmote())
+  }
 
   const [isHidden, setHidden] = useState(true)
   const copyArea = <textarea
@@ -44,12 +48,9 @@ export const Emote = forwardRef((props: IEmoteProps, ref: Ref<IEmoteRef>) => {
     cols={80}>
   </textarea>
 
-  let copyTimeout: number
-  const copyTimeoutDelay = 10
+  let copyTimeout: number       // timout id
+  const COPY_TIMEOUT_DELAY = 10 // ms
 
-  const randomEmote = () => {
-    setEmote(getRandomEmote())
-  }
   return (
     <div className="emote-container"
       onKeyPress={e => {
@@ -65,24 +66,24 @@ export const Emote = forwardRef((props: IEmoteProps, ref: Ref<IEmoteRef>) => {
               emoteTextRef.current?.select()
               emoteTextRef.current?.setSelectionRange(0, 99999)
               document.execCommand('copy')
-              setTool('Copied!')
+              setTooltip('Copied!')
 
               emoteTextRef.current?.blur()
 
               setHidden(true)
               clearTimeout(copyTimeout)
-            }, copyTimeoutDelay)
+            }, COPY_TIMEOUT_DELAY)
           }
         }}
         onMouseOut={() => {
-          setTool('Copy')
+          setTooltip('Copy')
         }}>
         <span id="emote-display" className="noselect">{emote}</span>
         {isHidden ? '' : copyArea}
-        <span
-          className="emote-tooltip noselect"
-        >{tool}</span>
+        <span className="emote-tooltip noselect">{tooltip}</span>
       </div>
     </div >
   )
-})
+}
+
+export const Emote = forwardRef(EmoteComponent)

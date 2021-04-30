@@ -1,5 +1,7 @@
 @import url('./colors.css');
 @import url('./emote.css');
+@import url('./add-custom.css');
+@import url('./button.css');
 
 html,
 body,
@@ -20,6 +22,7 @@ body,
 }
 
 .app-name {
+  position: absolute;
   display: flex;
   place-content: center;
   width: 100%;
@@ -80,7 +83,7 @@ body,
 
   .app-name 
   .app-title {
-    color: var(--color-1-light);
+    color: var(--color-2-light);
   }
 
   .app-footer a,

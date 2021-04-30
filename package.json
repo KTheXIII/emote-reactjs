@@ -1,7 +1,7 @@
 {
   "name": "random-emote-react",
-  "version": "0.3.0",
-  "description": "",
+  "version": "0.4.0",
+  "description": "Random emote written in ReactJS with TypeScript",
   "main": "app.js",
   "private": true,
   "scripts": {
@@ -9,10 +9,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "test:eslint": "eslint src/ --ext .ts --ext .js",
     "clean": "rimraf build/*"
   },
-  "keywords": [],
   "author": "KTheXIII",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",

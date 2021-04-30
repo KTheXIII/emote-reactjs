@@ -35,7 +35,7 @@
 .emote-container
 .emote-copy
 #emote-display:active {
-  font-size: 39pt;
+  font-size: 31pt;
 }
 
 .emote-container
@@ -50,7 +50,7 @@
   width: 60pt;
   padding: 5pt;
   border-radius: 5pt;
-  bottom: 54%;
+  bottom: 60%;
   z-index: 1;
   margin-left: -35pt;
 }
@@ -94,5 +94,4 @@
   .emote-tooltip::after {
     border-color: var(--background-1-light) transparent transparent transparent;
   }
-
 }
