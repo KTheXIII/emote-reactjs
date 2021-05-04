@@ -42,6 +42,10 @@ rules:
   eol-last:
     - error
     - always
+  arrow-spacing:
+    - error
+    - before: true
+      after: true
   keyword-spacing:
     - error
   space-in-parens:
@@ -84,6 +88,9 @@ rules:
         balanced: true
       markers:
         - '/'
+        - '#'
+        - '-'
+        - '='
   no-trailing-spaces:
     - error
   no-warning-comments:

@@ -2,7 +2,7 @@
 @import url('./emote.css');
 @import url('./add-custom.css');
 @import url('./button.css');
-
+@import url('./modifiers.css');
 html,
 body,
 #root {
@@ -10,7 +10,6 @@ body,
   padding: 0;
   font-family: 'Roboto', sans-serif;
   height: 100%;
-
   background-color: var(--background-dark);
   color: var(--color-dark);
 }
@@ -26,20 +25,20 @@ body,
   display: flex;
   place-content: center;
   width: 100%;
-  height:64pt;
+  height: 64pt;
   font-size: 21pt;
   font-weight: 300;
 }
 
-.app-name 
-.app-title {
+.app-name .app-title {
   margin: auto;
   margin-top: 32pt;
+  font-size: 26pt;
+  font-weight: 300;
   color: var(--color-1-dark);
 }
 
-.app-name
-.app-title:hover {
+.app-name .app-title:hover {
   cursor: pointer;
 }
 
@@ -50,7 +49,8 @@ body,
   place-content: center;
 }
 
-.app-footer a, .app-footer span {
+.app-footer a,
+.app-footer span {
   margin: auto 0pt;
   text-decoration: none;
   color: var(--color-2-dark);
@@ -65,30 +65,16 @@ body,
   text-decoration: underline;
 }
 
-.noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none;   /* Safari */
-  -khtml-user-select: none;    /* Konqueror HTML */
-  -moz-user-select: none;      /* Firefox */
-  -ms-user-select: none;       /* Internet Explorer/Edge */
-  user-select: none;           /* Non-prefixed version, currently
-                                  supported by Chrome and Opera */
-}
-
 @media (prefers-color-scheme: light) {
   #root {
     background-color: var(--background-light);
     color: var(--color-light);
   }
-
-  .app-name 
-  .app-title {
+  .app-name .app-title {
     color: var(--color-2-light);
   }
-
   .app-footer a,
   .app-footer span {
     color: var(--color-2-light);
   }
-
 }

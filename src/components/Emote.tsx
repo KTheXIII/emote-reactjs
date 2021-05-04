@@ -1,4 +1,5 @@
 import {
+  ReactElement,
   useState,
   useRef,
   Ref,
@@ -6,7 +7,7 @@ import {
   forwardRef
 } from 'react'
 
-import emotes from '../assets/emojis.json'
+import emotes from '../assets/emotes.json'
 
 export interface IEmoteProps {
   title?: string
@@ -27,9 +28,9 @@ function getRandomEmote() {
   return emoteList[i]
 }
 
-function EmoteComponent(props: IEmoteProps, ref: Ref<IEmoteRef>): JSX.Element {
+function EmoteComponent(props: IEmoteProps, ref: Ref<IEmoteRef>): ReactElement {
   const emoteTextRef = useRef<HTMLTextAreaElement | null>(null)
-  const [emote, setEmote] = useState(getRandomEmote())
+  const [emote, setEmote] = useState(getRandomEmote()) // e
   const [tooltip, setTooltip] = useState('Copy')
 
   // Bind the randomEmote function
@@ -48,7 +49,7 @@ function EmoteComponent(props: IEmoteProps, ref: Ref<IEmoteRef>): JSX.Element {
     cols={80}>
   </textarea>
 
-  let copyTimeout: number       // timout id
+  let copyTimeout: number       // timeout id
   const COPY_TIMEOUT_DELAY = 10 // ms
 
   return (
@@ -75,9 +76,7 @@ function EmoteComponent(props: IEmoteProps, ref: Ref<IEmoteRef>): JSX.Element {
             }, COPY_TIMEOUT_DELAY)
           }
         }}
-        onMouseOut={() => {
-          setTooltip('Copy')
-        }}>
+        onMouseOut={() => { setTooltip('Copy') }}>
         <span id="emote-display" className="noselect">{emote}</span>
         {isHidden ? '' : copyArea}
         <span className="emote-tooltip noselect">{tooltip}</span>

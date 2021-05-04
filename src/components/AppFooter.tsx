@@ -1,12 +1,14 @@
+import { ReactElement } from 'react'
+
 interface IAppFooter {
   link: string
   name: string
   githublink?: string
 }
 
-export function AppFooter(props: IAppFooter): JSX.Element {
+export function AppFooter(props: IAppFooter): ReactElement {
   return (
-    <div className="app-footer noselect">
+    <div className="app-footer noselect" >
       <a
         title="Github repository link"
         rel="noreferrer"
