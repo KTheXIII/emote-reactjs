@@ -1,7 +1,13 @@
 :root {
   /* nord color scheme */
-  --background-nord: #2e3440;
-  --foreground-nord: #d8dee9;
+  --grey-nord: #2e3440;
+  --grey-nord-1: hsl(220, 16%, 32%);
+  --grey-nord-2: hsl(220, 16%, 42%);
+  --grey-nord-3: hsl(220, 16%, 52%);
+  --grey-nord-4: hsl(220, 16%, 62%);
+  --grey-nord-5: hsl(220, 16%, 72%);
+  --grey-nord-6: hsl(220, 16%, 82%);
+  --grey-nord-7: #d8dee9;
   --black-nord: #3b4252;
   --red-nord: #bf616a;
   --green-nord: #a3be8c;
@@ -13,44 +19,12 @@
 }
 
 .nord-theme {
-  background-color: var(--background-nord);
-  color: var(--white-nord);
-}
-
-.nord-theme .app-name .app-title {
-  color: var(--cyan-nord);
-}
-
-.nord-theme .theme-dropdown p:hover {
-  color: var(--cyan-nord);
-}
-
-.nord-theme .theme-dropdown p {
-  color: var(--blue-nord);
-}
-
-.nord-theme .theme-content {
-  background-color: var(--black-nord);
-}
-
-.nord-theme .theme-content p:hover {
-  color: var(--black-nord);
-  background-color: var(--white-nord);
-}
-
-.nord-theme .app-footer a,
-.nord-theme .app-footer span {
-  color: var(--blue-nord);
-}
-
-.nord-theme .emote-container .emote-copy #emote-display {
-  color: var(--white-nord);
-}
-
-.nord-theme .emote-container .emote-copy .emote-tooltip {
-  background-color: var(--black-nord);
-}
-
-.nord-theme .emote-container .emote-copy .emote-tooltip::after {
-  border-color: var(--black-nord) transparent transparent transparent;
+  --bg: var(--black-nord);
+  --bg-0: var(--grey-nord-1);
+  --bg-1: var(--grey-nord-2);
+  --text: var(--white-nord);
+  --text-1: var(--grey-nord-3);
+  --text-2: var(--grey-nord-4);
+  --text-3: var(--grey-nord-5);
+  --text-hover: var(--grey-nord-7);
 }

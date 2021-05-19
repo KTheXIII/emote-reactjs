@@ -1,4 +1,4 @@
-@import url('./themes/system.css');
+@import url('./themes/auto.css');
 @import url('./emote.css');
 @import url('./add-custom.css');
 @import url('./button.css');
@@ -12,6 +12,8 @@ body,
   padding: 0;
   font-family: 'Roboto', sans-serif;
   height: 100%;
+  background-color: var(--bg);
+  color: var(--text);
 }
 
 .app {
@@ -39,6 +41,7 @@ body,
   margin-top: 32pt;
   font-size: 23pt;
   font-weight: 300;
+  color: var(--text-2);
 }
 
 .app-name .app-title:hover {
@@ -56,14 +59,16 @@ body,
 .app-footer span {
   margin: auto 0pt;
   text-decoration: none;
-  color: var(--color-2-dark);
+  color: var(--text-2);
   font-weight: 300;
 }
 
 .app-footer span {
+  cursor: default;
   padding: 0pt 5pt;
 }
 
 .app-footer a:hover {
+  color: var(--text-hover);
   text-decoration: underline;
 }

@@ -1,8 +1,14 @@
 :root {
   /* solarized color scheme */
-  --background-solarized-dark: #002b36;
-  --foreground-solarized-dark: #93a1a1;
-  --black-soloarized-dark: #002b36;
+  --grey-solarized-dark: #002b36;
+  --grey-solarized-dark-1: hsl(192, 100%, 21%);
+  --grey-solarized-dark-2: hsl(192, 100%, 28%);
+  --grey-solarized-dark-3: hsl(192, 100%, 35%);
+  --grey-solarized-dark-4: hsl(192, 100%, 42%);
+  --grey-solarized-dark-5: hsl(192, 100%, 48%);
+  --grey-solarized-dark-6: hsl(192, 100%, 55%);
+  --grey-solarized-dark-7: hsl(192, 100%, 62%);
+  --black-soloarized-dark: #002d38;
   --red-soloarized-dark: #dc322f;
   --green-soloarized-dark: #859900;
   --yellow-soloarized-dark: #b58900;
@@ -13,45 +19,12 @@
 }
 
 .solarized-dark-theme {
-  background-color: var(--background-solarized-dark);
-  color: var(--white-soloarized-dark);
-}
-
-.solarized-dark-theme .app-name .app-title {
-  color: var(--cyan-soloarized-dark);
-}
-
-.solarized-dark-theme .theme-dropdown p {
-  color: var(--foreground-solarized-dark);
-}
-
-.solarized-dark-theme .theme-dropdown p:hover {
-  color: var(--blue-soloarized-dark);
-}
-
-.solarized-dark-theme .theme-content {
-  background-color: var(--background-solarized-dark);
-}
-
-.solarized-dark-theme .theme-content p:hover {
-  color: var(--black-soloarized-dark);
-  background-color: var(--white-soloarized-dark);
-}
-
-.solarized-dark-theme .app-footer a,
-.solarized-dark-theme .app-footer span {
-  color: var(--blue-nord);
-}
-
-.solarized-dark-theme .emote-container .emote-copy #emote-display {
-  color: var(--white-soloarized-dark);
-}
-
-.solarized-dark-theme .emote-container .emote-copy .emote-tooltip {
-  color: var(--background-solarized-dark);
-  background-color: var(--foreground-solarized-dark);
-}
-
-.solarized-dark-theme .emote-container .emote-copy .emote-tooltip::after {
-  border-color: var(--foreground-solarized-dark) transparent transparent transparent;
+  --bg: var(--black-soloarized-dark);
+  --bg-0: var(--grey-solarized-dark-1);
+  --bg-1: var(--grey-solarized-dark-2);
+  --text: var(--white-soloarized-dark);
+  --text-1: var(--grey-solarized-dark-3);
+  --text-2: var(--grey-solarized-dark-4);
+  --text-3: var(--grey-solarized-dark-4);
+  --text-hover: var(--grey-solarized-dark-7);
 }

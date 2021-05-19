@@ -1,0 +1,52 @@
+:root {
+  --grey: #181a1c;
+  --grey-1: #333648;
+  --grey-2: #363a4e;
+  --grey-3: #393e53;
+  --grey-4: #3f445b;
+  --grey-5: hsl(229, 18%, 40%);
+  --grey-6: hsl(229, 18%, 50%);
+  --grey-7: hsl(229, 18%, 60%);
+  --grey-8: hsl(229, 18%, 70%);
+  --grey-9: hsl(229, 18%, 80%);
+  --black: #2b2d3a;
+  --red: #ff6188;
+  --red-1: #fc5d7c;
+  --red-2: #55393d;
+  --green: #a7df78;
+  --green-1: #9ed072;
+  --green-2: #394634;
+  --yellow: #e7c664;
+  --yellow-1: #4e432f;
+  --blue: #76cce0;
+  --blue-1: #85d3f2;
+  --blue-2: #354157;
+  --magenta: #b39df3;
+  --magenta-1: #4e432f;
+  --orange: #f39660;
+  --white: #e3e1e4;
+}
+
+.auto-theme {
+  --bg: var(--black);
+  --bg-0: var(--grey-1);
+  --bg-1: var(--grey-2);
+  --text: var(--white);
+  --text-1: var(--grey-3);
+  --text-2: var(--grey-4);
+  --text-3: var(--grey-5);
+  --text-hover: var(--grey-7);
+}
+
+@media (prefers-color-scheme: light) {
+  .auto-theme {
+    --bg: var(--white);
+    --bg-0: var(--grey-9);
+    --bg-1: var(--grey-8);
+    --text: var(--grey-4);
+    --text-1: var(--grey-5);
+    --text-2: var(--grey-6);
+    --text-3: var(--grey-7);
+    --text-hover: var(--grey-1);
+  }
+}

@@ -18,14 +18,13 @@ export interface IEmoteRef {
 }
 
 let lastIndex = 0
-const emoteList = emotes.list
 function getRandomEmote() {
-  let i = Math.floor(Math.random() * emoteList.length)
+  let i = Math.floor(Math.random() * emotes.length)
   if (lastIndex == i) {
-    i = (i < emoteList.length) ? i++ : i--
+    i = (i < emotes.length) ? i++ : i--
     lastIndex = i
   }
-  return emoteList[i]
+  return emotes[i].emote
 }
 
 function EmoteComponent(props: IEmoteProps, ref: Ref<IEmoteRef>): ReactElement {
