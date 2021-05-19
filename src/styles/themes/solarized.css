@@ -1,0 +1,57 @@
+:root {
+  /* solarized color scheme */
+  --background-solarized-dark: #002b36;
+  --foreground-solarized-dark: #93a1a1;
+  --black-soloarized-dark: #002b36;
+  --red-soloarized-dark: #dc322f;
+  --green-soloarized-dark: #859900;
+  --yellow-soloarized-dark: #b58900;
+  --blue-soloarized-dark: #268bd2;
+  --magenta-soloarized-dark: #6c71c4;
+  --cyan-soloarized-dark: #2aa198;
+  --white-soloarized-dark: #93a1a1;
+}
+
+.solarized-dark-theme {
+  background-color: var(--background-solarized-dark);
+  color: var(--white-soloarized-dark);
+}
+
+.solarized-dark-theme .app-name .app-title {
+  color: var(--cyan-soloarized-dark);
+}
+
+.solarized-dark-theme .theme-dropdown p {
+  color: var(--foreground-solarized-dark);
+}
+
+.solarized-dark-theme .theme-dropdown p:hover {
+  color: var(--blue-soloarized-dark);
+}
+
+.solarized-dark-theme .theme-content {
+  background-color: var(--background-solarized-dark);
+}
+
+.solarized-dark-theme .theme-content p:hover {
+  color: var(--black-soloarized-dark);
+  background-color: var(--white-soloarized-dark);
+}
+
+.solarized-dark-theme .app-footer a,
+.solarized-dark-theme .app-footer span {
+  color: var(--blue-nord);
+}
+
+.solarized-dark-theme .emote-container .emote-copy #emote-display {
+  color: var(--white-soloarized-dark);
+}
+
+.solarized-dark-theme .emote-container .emote-copy .emote-tooltip {
+  color: var(--background-solarized-dark);
+  background-color: var(--foreground-solarized-dark);
+}
+
+.solarized-dark-theme .emote-container .emote-copy .emote-tooltip::after {
+  border-color: var(--foreground-solarized-dark) transparent transparent transparent;
+}

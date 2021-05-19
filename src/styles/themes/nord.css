@@ -1,0 +1,56 @@
+:root {
+  /* nord color scheme */
+  --background-nord: #2e3440;
+  --foreground-nord: #d8dee9;
+  --black-nord: #3b4252;
+  --red-nord: #bf616a;
+  --green-nord: #a3be8c;
+  --yellow-nord: #ebcb8b;
+  --blue-nord: #81a1c1;
+  --magenta-nord: #b48ead;
+  --cyan-nord: #88c9d0;
+  --white-nord: #e5e9f0;
+}
+
+.nord-theme {
+  background-color: var(--background-nord);
+  color: var(--white-nord);
+}
+
+.nord-theme .app-name .app-title {
+  color: var(--cyan-nord);
+}
+
+.nord-theme .theme-dropdown p:hover {
+  color: var(--cyan-nord);
+}
+
+.nord-theme .theme-dropdown p {
+  color: var(--blue-nord);
+}
+
+.nord-theme .theme-content {
+  background-color: var(--black-nord);
+}
+
+.nord-theme .theme-content p:hover {
+  color: var(--black-nord);
+  background-color: var(--white-nord);
+}
+
+.nord-theme .app-footer a,
+.nord-theme .app-footer span {
+  color: var(--blue-nord);
+}
+
+.nord-theme .emote-container .emote-copy #emote-display {
+  color: var(--white-nord);
+}
+
+.nord-theme .emote-container .emote-copy .emote-tooltip {
+  background-color: var(--black-nord);
+}
+
+.nord-theme .emote-container .emote-copy .emote-tooltip::after {
+  border-color: var(--black-nord) transparent transparent transparent;
+}

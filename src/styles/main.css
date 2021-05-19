@@ -1,8 +1,10 @@
-@import url('./colors.css');
+@import url('./themes/system.css');
 @import url('./emote.css');
 @import url('./add-custom.css');
 @import url('./button.css');
 @import url('./modifiers.css');
+@import url('./themes/nord.css');
+@import url('./themes/solarized.css');
 html,
 body,
 #root {
@@ -10,8 +12,6 @@ body,
   padding: 0;
   font-family: 'Roboto', sans-serif;
   height: 100%;
-  background-color: var(--background-dark);
-  color: var(--color-dark);
 }
 
 .app {
@@ -30,12 +30,15 @@ body,
   font-weight: 300;
 }
 
+.app .options {
+  width: 256pt;
+}
+
 .app-name .app-title {
   margin: auto;
   margin-top: 32pt;
-  font-size: 26pt;
+  font-size: 23pt;
   font-weight: 300;
-  color: var(--color-1-dark);
 }
 
 .app-name .app-title:hover {
@@ -63,18 +66,4 @@ body,
 
 .app-footer a:hover {
   text-decoration: underline;
-}
-
-@media (prefers-color-scheme: light) {
-  #root {
-    background-color: var(--background-light);
-    color: var(--color-light);
-  }
-  .app-name .app-title {
-    color: var(--color-2-light);
-  }
-  .app-footer a,
-  .app-footer span {
-    color: var(--color-2-light);
-  }
 }

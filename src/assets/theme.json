@@ -1,0 +1,16 @@
+[{
+    "id": "system-theme",
+    "name": "default",
+    "source": "/"
+  },
+  {
+    "id": "nord-theme",
+    "name": "nord",
+    "source": "https://github.com/dylanaraps/pywal"
+  },
+  {
+    "id": "solarized-dark-theme",
+    "name": "solarized dark",
+    "source": "https://github.com/dylanaraps/pywal"
+  }
+]
