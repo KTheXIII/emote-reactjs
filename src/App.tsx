@@ -11,7 +11,7 @@ export function App(): JSX.Element {
     <div className="app">
       <AppName
         title={'./emote'}
-        titleClicked={() => emoteRef.current?.randomEmote()}
+        refreshButton={() => emoteRef.current?.randomEmote()}
       />
       <Emote ref={emoteRef} />
       <AppFooter

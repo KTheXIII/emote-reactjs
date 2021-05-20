@@ -6,10 +6,20 @@
   height: 64pt;
   font-size: 21pt;
   font-weight: 300;
+  padding-top: 12pt;
 }
 
-.app .options {
+.app .left,
+.app .right {
   width: 256pt;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  font-size: 11pt;
+  margin-right: 12pt;
 }
 
 .app-name .center {
@@ -22,22 +32,29 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: auto;
-  margin-top: 32pt;
   font-size: 23pt;
   font-weight: 300;
   color: var(--text-title);
   transition: color 125ms ease-in;
 }
 
-.app-name .app-title:hover {
+.app-name h1 {
+  margin: 0 auto;
+}
+
+.app-name .app-title:hover,
+.app-name .refresh:hover {
   cursor: pointer;
 }
 
-.app-name .refresh-btn {
-  position: absolute;
-  width: 21pt;
-  height: 21pt;
-  padding: 3.5pt;
-  margin: auto;
+.app-name .refresh {
+  color: var(--bg-1);
+}
+
+.app-name .refresh:hover {
+  color: var(--text-hover);
+}
+
+.app-name .refresh:active {
+  color: var(--bg-0);
 }

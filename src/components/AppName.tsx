@@ -1,29 +1,56 @@
-import { ReactElement } from 'react'
+import { ReactElement, useEffect } from 'react'
 
-// import { refreshIcon } from '../assets/icons'
 import { AppTheme } from './AppTheme'
 
 import '../styles/header.css'
 
 interface IAppName {
   title: string
-  titleClicked?: () => void
+  refreshButton?: () => void
 }
 
 export const AppName: React.FC<IAppName> = (props): ReactElement => {
-  const { titleClicked } = props
+  const { refreshButton } = props
+  let isDown = false
+
+  function onKeyDown(e: KeyboardEvent) {
+    if (e.key == 'Tab') {
+      e.preventDefault()
+      if (refreshButton && !isDown)
+        refreshButton()
+      isDown = true
+    }
+  }
+
+  function onKeyUp(e: KeyboardEvent) {
+    if (e.key == 'Tab' && isDown) isDown = false
+  }
+
+  useEffect(() => {
+    window.addEventListener('keydown', onKeyDown)
+    window.addEventListener('keyup', onKeyUp)
+    return () => {
+      window.removeEventListener('keydown', onKeyDown)
+      window.removeEventListener('keyup', onKeyUp)
+    }
+  }, [])
 
   return (
     <div className="app-name">
-      <div className="options"></div>
+      <div className="left"></div>
       <div className="center">
         <h1 className="app-title noselect"
-          onClick={titleClicked}
+          onClick={refreshButton}
         >{props.title}</h1>
-        {/* <button className="refresh-btn">{refreshIcon}</button> */}
       </div>
-      <div className="options">
-        <AppTheme />
+      <div className="right">
+        <div className="options">
+          <AppTheme />
+          <span
+            className="refresh noselect"
+            onMouseDown={refreshButton}
+          >refresh</span>
+        </div>
       </div>
     </div>
   )

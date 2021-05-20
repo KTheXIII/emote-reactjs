@@ -1,37 +1,6 @@
-.app-button {
-  background-color: red;
-  color: purple;
-  border: none;
-  cursor: pointer;
-  border-radius: 5pt;
-  padding: 0;
-}
-
-.app-button:hover {
-  color: blue;
-}
-
-.app-button:active {
-  background-color: green;
-}
-
 button {
   border: none;
   cursor: pointer;
   border-radius: 5pt;
   padding: 0;
 }
-
-
-/* @media (prefers-color-scheme: light) {
-  .system-theme .app-button {
-    background-color: var(--background-light);
-    color: var(--color-1-light);
-  }
-  .system-theme .app-button:hover {
-    color: var(--color-3-light);
-  }
-  .system-theme .app-button:active {
-    background-color: var(--background-1-light);
-  }
-} */
