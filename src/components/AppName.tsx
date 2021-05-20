@@ -1,7 +1,7 @@
 import { ReactElement } from 'react'
 
 // import { refreshIcon } from '../assets/icons'
-import { AppThemeDropdown } from './AppThemeDropdown'
+import { AppTheme } from './AppTheme'
 
 import '../styles/header.css'
 
@@ -23,7 +23,7 @@ export const AppName: React.FC<IAppName> = (props): ReactElement => {
         {/* <button className="refresh-btn">{refreshIcon}</button> */}
       </div>
       <div className="options">
-        <AppThemeDropdown />
+        <AppTheme />
       </div>
     </div>
   )

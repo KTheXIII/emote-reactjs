@@ -10,6 +10,7 @@ body,
   height: 100%;
   background-color: var(--bg);
   color: var(--text);
+  transition: background-color 250ms ease-in;
 }
 
 .app {
@@ -41,4 +42,10 @@ body,
 .app-footer a:hover {
   color: var(--text-hover);
   text-decoration: underline;
+}
+
+@media all and (display-mode: standalone) and (orientation: portrait) and (min-device-height: 668px) {
+  .app-footer {
+    padding-bottom: 2em;
+  }
 }

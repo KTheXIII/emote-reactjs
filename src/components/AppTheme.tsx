@@ -10,27 +10,25 @@ import themeList from '../assets/theme.json'
 import '../styles/theme-dropdown.css'
 
 function saveSelectedTheme(theme: string) {
-  localStorage.setItem('userTheme', theme)
+  localStorage.setItem('theme', theme)
   document.body.className = theme
 }
 
-export const AppThemeDropdown = (): ReactElement => {
+function userTheme() {
+  return localStorage.getItem('theme') || 'auto-theme'
+}
+
+export const AppTheme = (): ReactElement => {
   const [isThemeHidden, setIsThemeHidden] = useState(true)
   const themeRef = useRef<HTMLDivElement | null>(null)
-  let currentTheme = 'auto-theme'
 
   useEffect(() => {
-    // Load the user stored theme
-    const userTheme = localStorage.getItem('userTheme')
-    if (userTheme) {
-      currentTheme = userTheme
-      document.body.className = currentTheme
-    }
+    document.body.className = userTheme()
   }, [])
 
   function onClickOutsideTheme(event: MouseEvent) {
     if (themeRef.current && !themeRef.current.contains(event.target as Node)) {
-      document.body.className = currentTheme
+      document.body.className = userTheme()
       setIsThemeHidden(true)
     }
   }
@@ -48,8 +46,7 @@ export const AppThemeDropdown = (): ReactElement => {
       <p
         key={theme.name}
         onClick={() => {
-          currentTheme = theme.id
-          saveSelectedTheme(currentTheme)
+          saveSelectedTheme(theme.id)
           setIsThemeHidden(true)
         }}
         onMouseEnter={() => {

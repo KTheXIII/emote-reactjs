@@ -1,4 +1,5 @@
-[{
+[
+  {
     "id": "auto-theme",
     "name": "default",
     "source": "/"
@@ -22,5 +23,10 @@
     "id": "gruvbox-theme",
     "name": "gruvbox",
     "source": "https://github.com/morhetz/gruvbox"
+  },
+  {
+    "id": "dracula-theme",
+    "name": "dracula",
+    "source": "https://github.com/dracula/dracula-theme"
   }
 ]

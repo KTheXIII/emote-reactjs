@@ -1,0 +1,25 @@
+:root {
+  --background-dracula: #272935;
+  --background-dracula-1: #303241;
+  --background-dracula-2: #3d4052;
+  --foreground-dracula: #f8f8f2;
+  --red-darcula: #ff5555;
+  --green-darcula: #50fa7b;
+  --yellow-darcula: #f1fa8c;
+  --blue-darcula: #bd93f9;
+  --magenta-darcula: #ff79c6;
+  --cyan-darcula: #8be9fd;
+  --orange-darcula: #ffb86c;
+  --purple-darcula: #bd93f9;
+}
+
+.dracula-theme {
+  --bg: var(--background-dracula);
+  --bg-0: var(--background-dracula-1);
+  --bg-1: var(--background-dracula-2);
+  --text: var(--foreground-dracula);
+  --text-1: var(--green-darcula);
+  --text-2: var(--yellow-darcula);
+  --text-3: var(--magenta-darcula);
+  --text-hover: var(--purple-darcula);
+}
