@@ -26,7 +26,7 @@
   margin-top: 32pt;
   font-size: 23pt;
   font-weight: 300;
-  color: var(--text-2);
+  color: var(--text-title);
 }
 
 .app-name .app-title:hover {

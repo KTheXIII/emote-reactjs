@@ -11,7 +11,7 @@
   margin-right: 21pt;
   font-size: 11pt;
   padding: 2pt 4pt;
-  color: var(--text-3);
+  color: var(--text-theme);
 }
 
 .theme-dropdown p:hover {

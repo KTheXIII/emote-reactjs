@@ -18,8 +18,8 @@
   --bg-0: var(--background-dracula-1);
   --bg-1: var(--background-dracula-2);
   --text: var(--foreground-dracula);
-  --text-1: var(--green-darcula);
-  --text-2: var(--yellow-darcula);
-  --text-3: var(--magenta-darcula);
-  --text-hover: var(--purple-darcula);
+  --text-title: var(--green-darcula);
+  --text-theme: var(--blue-darcula);
+  --text-hover: var(--orange-darcula);
+  --text-footer: var(--purple-darcula);
 }

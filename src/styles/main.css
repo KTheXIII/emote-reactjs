@@ -30,7 +30,7 @@ body,
 .app-footer span {
   margin: auto 0pt;
   text-decoration: none;
-  color: var(--text-2);
+  color: var(--text-footer);
   font-weight: 300;
 }
 

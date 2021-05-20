@@ -23,8 +23,8 @@
   --bg-0: var(--grey-nord-1);
   --bg-1: var(--grey-nord-2);
   --text: var(--white-nord);
-  --text-1: var(--grey-nord-3);
-  --text-2: var(--grey-nord-4);
-  --text-3: var(--grey-nord-5);
-  --text-hover: var(--grey-nord-7);
+  --text-title: var(--grey-nord-3);
+  --text-theme: var(--grey-nord-4);
+  --text-hover: var( --cyan-nord);
+  --text-footer: var( --blue-nord);
 }

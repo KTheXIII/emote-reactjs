@@ -1,0 +1,25 @@
+:root {
+  --background-eva: #2a3b4d;
+  --background-eva-1: hsl(211, 29%, 33%);
+  --background-eva-2: hsl(211, 29%, 43%);
+  --foreground-eva: #9fa2a6;
+  --black-eva: #2a3b4d;
+  --red-eva: #c4676c;
+  --green-eva: #5de561;
+  --yellow-eva: #cfd05d;
+  --blue-eva: #1ae1dc;
+  --magenta-eva: #9c6cd3;
+  --cyan-eva: #4b8f77;
+  --white-eva: #9fa2a6;
+}
+
+.eva-theme {
+  --bg: var(--background-eva);
+  --bg-0: var(--background-eva-1);
+  --bg-1: var(--background-eva-2);
+  --text: var(--foreground-eva);
+  --text-title: var(--magenta-eva);
+  --text-theme: var(--red-eva);
+  --text-hover: var(--cyan-eva);
+  --text-footer: var(--yellow-eva);
+}

@@ -43,21 +43,21 @@
   --bg-0: var(--grey-1);
   --bg-1: var(--grey-2);
   --text: var(--white);
-  --text-1: var(--grey-3);
-  --text-2: var(--grey-4);
-  --text-3: var(--grey-5);
+  --text-title: var(--grey-5);
+  --text-theme: var(--grey-5);
   --text-hover: var(--grey-7);
+  --text-footer: var(--grey-5);
 }
 
 @media (prefers-color-scheme: light) {
   .auto-theme {
     --bg: var(--white);
-    --bg-0: var(--grey-9);
-    --bg-1: var(--grey-8);
-    --text: var(--grey-4);
-    --text-1: var(--grey-5);
-    --text-2: var(--grey-6);
-    --text-3: var(--grey-7);
-    --text-hover: var(--grey-1);
+    --bg-0: var(--grey-8);
+    --bg-1: var(--grey-9);
+    --text: var(--black);
+    --text-title: var(--grey-8);
+    --text-theme: var(--grey-7);
+    --text-hover: var(--grey-3);
+    --text-footer: var(--grey-7);
   }
 }

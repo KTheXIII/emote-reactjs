@@ -23,8 +23,8 @@
   --bg-0: var(--grey-solarized-dark-1);
   --bg-1: var(--grey-solarized-dark-3);
   --text: var(--white-soloarized-dark);
-  --text-1: var(--grey-solarized-dark-3);
-  --text-2: var(--grey-solarized-dark-4);
-  --text-3: var(--grey-solarized-dark-4);
-  --text-hover: var(--grey-solarized-dark-7);
+  --text-title: var(--blue-soloarized-dark);
+  --text-theme: var(--cyan-soloarized-dark);
+  --text-hover: var( --white-soloarized-dark);
+  --text-footer: var( --grey-solarized-dark-1);
 }

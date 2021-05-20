@@ -28,5 +28,10 @@
     "id": "dracula-theme",
     "name": "dracula",
     "source": "https://github.com/dracula/dracula-theme"
+  },
+  {
+    "id": "eva-theme",
+    "name": "eva",
+    "source": "https://github.com/kjakapat/eva-theme"
   }
 ]
