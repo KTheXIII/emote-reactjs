@@ -4,12 +4,13 @@ import {
   useRef,
   useState
 } from 'react'
+import { infoIcon } from 'src/assets/icons'
 
 import themeList from '../assets/theme.json'
 
 import '../styles/theme-dropdown.css'
 
-function saveSelectedTheme(theme: string) {
+function saveTheme(theme: string) {
   localStorage.setItem('theme', theme)
   document.body.className = theme
 }
@@ -21,11 +22,15 @@ function userTheme() {
 export const AppTheme = (): ReactElement => {
   const [isThemeHidden, setIsThemeHidden] = useState(true)
   const themeRef = useRef<HTMLDivElement | null>(null)
+
+  // The color transition animation is not on when the page load
   let transitionTimeout: number
   const TRANSITION_ON_START_DELAY = 500
 
   useEffect(() => {
     document.body.className = userTheme()
+    // This put the color transition animation after some time when the page
+    // has been loaded
     if (!transitionTimeout) {
       transitionTimeout = window.setTimeout(() => {
         const root = document.querySelector('#root')
@@ -51,19 +56,30 @@ export const AppTheme = (): ReactElement => {
 
   // Create the dropdown element from JSON list
   const themeElement = themeList
-    .map(theme =>
-      <p
-        key={theme.name}
-        onClick={() => {
-          saveSelectedTheme(theme.id)
-          setIsThemeHidden(true)
-        }}
+    .map((theme, index) =>
+      <div
+        className="theme-element"
         onMouseEnter={() => {
           document.body.className = theme.id
         }}
-      >
-        {theme.name}
-      </p>
+        key={theme.name + index}>
+        <p
+          onClick={() => {
+            saveTheme(theme.id)
+            setIsThemeHidden(true)
+          }}
+        >
+          {theme.name}
+        </p>
+        <a className="theme-info"
+          title={`${theme.name} source`}
+          rel="noreferrer"
+          target="_blank"
+          href={theme.source}
+        >
+          {infoIcon}
+        </a>
+      </div>
     )
 
   return (

@@ -27,6 +27,7 @@
   font-size: 23pt;
   font-weight: 300;
   color: var(--text-title);
+  transition: color 125ms ease-in;
 }
 
 .app-name .app-title:hover {

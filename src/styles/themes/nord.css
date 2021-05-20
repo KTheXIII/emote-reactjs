@@ -27,4 +27,5 @@
   --text-theme: var(--grey-nord-4);
   --text-hover: var( --cyan-nord);
   --text-footer: var( --blue-nord);
+  --info-hover: var(--magenta-nord);
 }

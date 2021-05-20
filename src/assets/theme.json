@@ -7,12 +7,12 @@
   {
     "id": "nord-theme",
     "name": "nord",
-    "source": "https://github.com/dylanaraps/pywal"
+    "source": "https://www.nordtheme.com"
   },
   {
     "id": "solarized-dark-theme",
     "name": "solarized dark",
-    "source": "https://github.com/dylanaraps/pywal"
+    "source": "https://github.com/altercation/solarized"
   },
   {
     "id": "zenburn-theme",

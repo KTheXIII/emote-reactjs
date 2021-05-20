@@ -31,6 +31,7 @@ body,
   margin: auto 0pt;
   text-decoration: none;
   color: var(--text-footer);
+  transition: color 125ms ease-in;
   font-weight: 300;
 }
 

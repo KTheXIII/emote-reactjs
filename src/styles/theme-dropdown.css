@@ -15,7 +15,12 @@
   margin-right: 21pt;
   font-size: 11pt;
   padding: 2pt 4pt;
+}
+
+.theme-dropdown p,
+.theme-dropdown a {
   color: var(--text-theme);
+  transition: color 125ms ease-in;
 }
 
 .theme-dropdown p:hover {
@@ -38,8 +43,25 @@
 .theme-content p {
   margin: 0;
   padding: 5pt 10pt;
+  width: 100%;
 }
 
-.theme-content p:hover {
+.theme-content .theme-element:hover {
   background-color: var(--bg-1);
+}
+
+.theme-content .theme-element {
+  display: flex;
+  flex-direction: row;
+}
+
+.theme-element .theme-info {
+  width: 21pt;
+  height: 21pt;
+  margin: 0;
+  margin-right: 5pt;
+}
+
+.theme-element .theme-info:hover {
+  color: var(--info-hover);
 }

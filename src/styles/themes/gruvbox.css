@@ -21,4 +21,5 @@
   --text-theme: var(--blue-gruvbox);
   --text-hover: var(--white-gruvbox);
   --text-footer: var(--orange-gruvbox);
+  --info-hover: var(--red-gruvbox);
 }

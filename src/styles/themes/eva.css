@@ -20,6 +20,7 @@
   --text: var(--foreground-eva);
   --text-title: var(--magenta-eva);
   --text-theme: var(--red-eva);
-  --text-hover: var(--cyan-eva);
+  --text-hover: var(--blue-eva);
   --text-footer: var(--yellow-eva);
+  --info-hover: var(--green-eva);
 }

@@ -20,4 +20,5 @@
   --text-theme: var(--magenta-zenburn);
   --text-hover: var(--white-zenburn);
   --text-footer: var(--blue-zenburn);
+  --info-hover: var(--yellow-zenburn);
 }

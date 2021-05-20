@@ -22,4 +22,5 @@
   --text-theme: var(--blue-darcula);
   --text-hover: var(--orange-darcula);
   --text-footer: var(--purple-darcula);
+  --info-hover: var(--green-darcula);
 }

@@ -27,4 +27,5 @@
   --text-theme: var(--cyan-soloarized-dark);
   --text-hover: var( --white-soloarized-dark);
   --text-footer: var( --grey-solarized-dark-1);
+  --info-hover: var(--red-soloarized-dark);
 }
