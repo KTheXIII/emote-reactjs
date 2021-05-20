@@ -10,7 +10,6 @@ body,
   height: 100%;
   background-color: var(--bg);
   color: var(--text);
-  transition: background-color 250ms ease-in;
 }
 
 .app {
@@ -24,6 +23,7 @@ body,
   display: flex;
   flex-direction: row;
   place-content: center;
+  font-size: 11pt;
 }
 
 .app-footer a,
@@ -45,6 +45,12 @@ body,
 }
 
 @media all and (display-mode: standalone) and (orientation: portrait) and (min-device-height: 668px) {
+  .app-footer {
+    padding-bottom: 2em;
+  }
+}
+
+@media all and (display-mode: standalone) and (orientation: landscape) {
   .app-footer {
     padding-bottom: 2em;
   }

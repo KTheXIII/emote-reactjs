@@ -1,3 +1,7 @@
+.color-transition {
+  transition: background-color 250ms ease-in;
+}
+
 .theme-dropdown {
   height: 100%;
   display: flex;
