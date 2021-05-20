@@ -1,0 +1,21 @@
+:root {
+  --black-zenburn: #3F3F3F;
+  --red-zenburn: #CC9393;
+  --green-zenburn: #7F9F7F;
+  --yellow-zenburn: #F0DFAF;
+  --blue-zenburn: #8CD0D3;
+  --magenta-zenburn: #DC8CC3;
+  --orange-zenburn: #DFAF8F;
+  --white-zenburn: #DCDCCC;
+}
+
+.zenburn-theme {
+  --bg: var(--black-zenburn);
+  --bg-0: var(--grey-1);
+  --bg-1: var(--grey-2);
+  --text: var(--white-zenburn);
+  --text-1: var(--red-zenburn);
+  --text-2: var(--green-zenburn);
+  --text-3: var(--yellow-zenburn);
+  --text-hover: var(--orange-zenburn);
+}

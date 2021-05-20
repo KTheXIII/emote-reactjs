@@ -1,0 +1,22 @@
+:root {
+  --black-gruvbox: #282828;
+  --red-gruvbox: #cc241d;
+  --green-gruvbox: #98971a;
+  --yellow-gruvbox: #d79921;
+  --blue-gruvbox: #458588;
+  --magenta-gruvbox: #b16286;
+  --cyan-gruvbox: #689d6a;
+  --orange-gruvbox: #DFAF8F;
+  --white-gruvbox: #fbf1c7;
+}
+
+.gruvbox-theme {
+  --bg: var(--black-gruvbox);
+  --bg-0: var(--grey-1);
+  --bg-1: var(--grey-2);
+  --text: var(--white-gruvbox);
+  --text-1: var(--red-gruvbox);
+  --text-2: var(--green-gruvbox);
+  --text-3: var(--yellow-gruvbox);
+  --text-hover: var(--magenta-gruvbox);
+}

@@ -1,0 +1,42 @@
+.app-name {
+  position: absolute;
+  display: flex;
+  place-content: center;
+  width: 100%;
+  height: 64pt;
+  font-size: 21pt;
+  font-weight: 300;
+}
+
+.app .options {
+  width: 256pt;
+}
+
+.app-name .center {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.app-name .app-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+  margin-top: 32pt;
+  font-size: 23pt;
+  font-weight: 300;
+  color: var(--text-2);
+}
+
+.app-name .app-title:hover {
+  cursor: pointer;
+}
+
+.app-name .refresh-btn {
+  position: absolute;
+  width: 21pt;
+  height: 21pt;
+  padding: 3.5pt;
+  margin: auto;
+}

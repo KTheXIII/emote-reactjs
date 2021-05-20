@@ -13,15 +13,15 @@
   --green-soloarized-dark: #859900;
   --yellow-soloarized-dark: #b58900;
   --blue-soloarized-dark: #268bd2;
-  --magenta-soloarized-dark: #6c71c4;
+  --magenta-soloarized-dark: #d33682;
   --cyan-soloarized-dark: #2aa198;
-  --white-soloarized-dark: #93a1a1;
+  --white-soloarized-dark: #eee8d5;
 }
 
 .solarized-dark-theme {
   --bg: var(--black-soloarized-dark);
   --bg-0: var(--grey-solarized-dark-1);
-  --bg-1: var(--grey-solarized-dark-2);
+  --bg-1: var(--grey-solarized-dark-3);
   --text: var(--white-soloarized-dark);
   --text-1: var(--grey-solarized-dark-3);
   --text-2: var(--grey-solarized-dark-4);

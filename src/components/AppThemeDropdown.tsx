@@ -17,17 +17,20 @@ function saveSelectedTheme(theme: string) {
 export const AppThemeDropdown = (): ReactElement => {
   const [isThemeHidden, setIsThemeHidden] = useState(true)
   const themeRef = useRef<HTMLDivElement | null>(null)
+  let currentTheme = 'auto-theme'
 
   useEffect(() => {
     // Load the user stored theme
     const userTheme = localStorage.getItem('userTheme')
     if (userTheme) {
-      document.body.className = userTheme
+      currentTheme = userTheme
+      document.body.className = currentTheme
     }
   }, [])
 
   function onClickOutsideTheme(event: MouseEvent) {
     if (themeRef.current && !themeRef.current.contains(event.target as Node)) {
+      document.body.className = currentTheme
       setIsThemeHidden(true)
     }
   }
@@ -41,12 +44,21 @@ export const AppThemeDropdown = (): ReactElement => {
 
   // Create the dropdown element from JSON list
   const themeElement = themeList
-    .map(theme => <p key={theme.name} onClick={() => {
-      saveSelectedTheme(theme.id)
-      setIsThemeHidden(true)
-    }}>
-      {theme.name}
-    </p>)
+    .map(theme =>
+      <p
+        key={theme.name}
+        onClick={() => {
+          currentTheme = theme.id
+          saveSelectedTheme(currentTheme)
+          setIsThemeHidden(true)
+        }}
+        onMouseEnter={() => {
+          document.body.className = theme.id
+        }}
+      >
+        {theme.name}
+      </p>
+    )
 
   return (
     <div className="theme-dropdown">

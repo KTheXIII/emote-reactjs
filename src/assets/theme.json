@@ -12,5 +12,15 @@
     "id": "solarized-dark-theme",
     "name": "solarized dark",
     "source": "https://github.com/dylanaraps/pywal"
+  },
+  {
+    "id": "zenburn-theme",
+    "name": "zenburn",
+    "source": "https://github.com/jnurmine/Zenburn"
+  },
+  {
+    "id": "gruvbox-theme",
+    "name": "gruvbox",
+    "source": "https://github.com/morhetz/gruvbox"
   }
 ]

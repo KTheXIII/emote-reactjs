@@ -1,21 +1,29 @@
-/* .system-theme .app-button {
-  background-color: var(--background-dark);
-  color: var(--color-1-dark);
+.app-button {
+  background-color: red;
+  color: purple;
   border: none;
   cursor: pointer;
   border-radius: 5pt;
   padding: 0;
 }
 
-.system-theme .app-button:hover {
-  color: var(--color-3-dark);
+.app-button:hover {
+  color: blue;
 }
 
-.system-theme .app-button:active {
-  background-color: var(--background-1-dark);
+.app-button:active {
+  background-color: green;
 }
 
-@media (prefers-color-scheme: light) {
+button {
+  border: none;
+  cursor: pointer;
+  border-radius: 5pt;
+  padding: 0;
+}
+
+
+/* @media (prefers-color-scheme: light) {
   .system-theme .app-button {
     background-color: var(--background-light);
     color: var(--color-1-light);
