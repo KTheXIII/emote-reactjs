@@ -11,27 +11,19 @@ interface IAppName {
 
 export const AppName: React.FC<IAppName> = (props): ReactElement => {
   const { refreshButton } = props
-  let isDown = false
 
   function onKeyDown(e: KeyboardEvent) {
     if (e.key == 'Tab') {
       e.preventDefault()
-      if (refreshButton && !isDown)
+      if (refreshButton)
         refreshButton()
-      isDown = true
     }
-  }
-
-  function onKeyUp(e: KeyboardEvent) {
-    if (e.key == 'Tab' && isDown) isDown = false
   }
 
   useEffect(() => {
     window.addEventListener('keydown', onKeyDown)
-    window.addEventListener('keyup', onKeyUp)
     return () => {
       window.removeEventListener('keydown', onKeyDown)
-      window.removeEventListener('keyup', onKeyUp)
     }
   }, [])
 

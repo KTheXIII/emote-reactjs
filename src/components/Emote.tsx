@@ -4,7 +4,8 @@ import {
   useRef,
   Ref,
   useImperativeHandle,
-  forwardRef
+  forwardRef,
+  useEffect
 } from 'react'
 
 import emotes from '../assets/emotes.json'
@@ -27,7 +28,7 @@ let lastIndex = 0
 function getRandomEmote(): IEmote {
   let i = Math.floor(Math.random() * emotes.length)
   if (lastIndex == i) {
-    i = (i < emotes.length) ? i++ : i--
+    i = Math.floor(Math.random() * emotes.length)
     lastIndex = i
   }
   return emotes[i]
@@ -35,7 +36,7 @@ function getRandomEmote(): IEmote {
 
 function EmoteComponent(props: IEmoteProps, ref: Ref<IEmoteRef>): ReactElement {
   const emoteTextRef = useRef<HTMLTextAreaElement | null>(null)
-  const [emote, setEmote] = useState(getRandomEmote()) // e
+  const [emote, setEmote] = useState<IEmote>() // e
   const [tooltip, setTooltip] = useState('Copy')
 
   // Bind the randomEmote function
@@ -47,7 +48,7 @@ function EmoteComponent(props: IEmoteProps, ref: Ref<IEmoteRef>): ReactElement {
   const [isHidden, setHidden] = useState(true)
   const copyArea: ReactElement = <textarea
     id="emote-copy-area"
-    value={emote.emote}
+    value={emote?.emote}
     ref={emoteTextRef}
     onChange={() => { return }}
     rows={24}
@@ -56,6 +57,10 @@ function EmoteComponent(props: IEmoteProps, ref: Ref<IEmoteRef>): ReactElement {
 
   let copyTimeout: number       // timeout id
   const COPY_TIMEOUT_DELAY = 10 // ms
+
+  useEffect(() => {
+    setEmote(getRandomEmote())
+  }, [])
 
   return (
     <div className="emote-container">
@@ -79,7 +84,7 @@ function EmoteComponent(props: IEmoteProps, ref: Ref<IEmoteRef>): ReactElement {
           }
         }}
         onMouseOut={() => setTooltip('Copy')}>
-        <span id="emote-display" className="noselect">{emote.emote}</span>
+        <span id="emote-display" className="noselect">{emote?.emote}</span>
         {isHidden ? '' : copyArea}
         <span className="emote-tooltip noselect">{tooltip}</span>
       </div>
