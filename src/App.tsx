@@ -17,7 +17,7 @@ export function App(): JSX.Element {
       <AppFooter
         link='https://github.com/KTheXIII'
         name='2021 © KTheXIII'
-        githublink='https://github.com/KTheXIII/emote-reactjs'
+        githubLink='https://github.com/KTheXIII/emote-reactjs'
       />
     </div>
   )

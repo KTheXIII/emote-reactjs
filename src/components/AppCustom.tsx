@@ -17,13 +17,10 @@ export function AppCustom(): ReactElement {
             setIsEditorHidden(!isEditorHidden)
           }}
         >{plusIcon}</button>
-        {
-          isEditorHidden ?
-            ''
-            :
-            <div className="editor">
-              <h1>Hello there</h1>
-            </div>
+        {!isEditorHidden &&
+          <div className="editor">
+            <h1>Hello there</h1>
+          </div>
         }
       </div>
     </div>

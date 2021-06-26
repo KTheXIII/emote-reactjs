@@ -3,7 +3,7 @@ import { ReactElement } from 'react'
 interface IAppFooter {
   link: string
   name: string
-  githublink?: string
+  githubLink?: string
 }
 
 export function AppFooter(props: IAppFooter): ReactElement {
@@ -13,7 +13,7 @@ export function AppFooter(props: IAppFooter): ReactElement {
         title="Github repository link"
         rel="noreferrer"
         target="_blank"
-        href={props.githublink ? props.githublink : '/'}
+        href={props.githubLink ? props.githubLink : '/'}
       >Github Repository</a>
       <span>|</span>
       <a title="Github profile link"

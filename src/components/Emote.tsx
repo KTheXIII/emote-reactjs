@@ -85,7 +85,7 @@ function EmoteComponent(props: IEmoteProps, ref: Ref<IEmoteRef>): ReactElement {
         }}
         onMouseOut={() => setTooltip('Copy')}>
         <span id="emote-display" className="noselect">{emote?.emote}</span>
-        {isHidden ? '' : copyArea}
+        {!isHidden && copyArea}
         <span className="emote-tooltip noselect">{tooltip}</span>
       </div>
     </div >

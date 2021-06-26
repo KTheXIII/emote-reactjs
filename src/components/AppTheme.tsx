@@ -90,16 +90,12 @@ export const AppTheme = (): ReactElement => {
           setIsThemeHidden(false)
         }}
       >theme</p>
-      {
-        isThemeHidden ?
-          ''
-          :
-          <div
-            className="theme-content"
-            ref={themeRef}
-          >
-            {themeElement}
-          </div>
+      {!isThemeHidden &&
+        <div
+          className="theme-content"
+          ref={themeRef}>
+          {themeElement}
+        </div>
       }
     </div>
   )

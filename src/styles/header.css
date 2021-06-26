@@ -30,6 +30,7 @@
 
 .app-name .app-title {
   display: flex;
+  margin-bottom: auto;
   flex-direction: row;
   justify-content: center;
   font-size: 23pt;
@@ -42,19 +43,23 @@
   margin: 0 auto;
 }
 
+.app-name .option-button {
+  margin-left: auto;
+}
+
 .app-name .app-title:hover,
-.app-name .refresh:hover {
+.app-name .option-button:hover {
   cursor: pointer;
 }
 
-.app-name .refresh {
+.app-name .option-button {
   color: var(--bg-1);
 }
 
-.app-name .refresh:hover {
+.app-name .option-button:hover {
   color: var(--text-hover);
 }
 
-.app-name .refresh:active {
+.app-name .option-button:active {
   color: var(--bg-0);
 }

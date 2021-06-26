@@ -39,7 +39,10 @@ export const AppName: React.FC<IAppName> = (props): ReactElement => {
         <div className="options">
           <AppTheme />
           <span
-            className="refresh noselect"
+            className="option-button noselect"
+          >settings</span>
+          <span
+            className="option-button noselect"
             onMouseDown={refreshButton}
           >refresh</span>
         </div>

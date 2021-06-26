@@ -1,6 +1,6 @@
 {
   "name": "random-emote-react",
-  "version": "0.4.0",
+  "version": "0.0.4",
   "description": "Random emote written in ReactJS with TypeScript",
   "main": "app.js",
   "private": true,
