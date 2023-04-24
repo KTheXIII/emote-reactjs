@@ -1,42 +1,30 @@
-# ┃ Outputs
-# ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫ #
-
-## Builds
-build
-
-## Generated data
-data
-
-## Package files
-*.zip
-*.rar
-*.tar.gz
-
-## NodeJS
-node_modules
-
-## Log files
+# Logs
+logs
 *.log
-*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-## Environment Variables
-.env
+node_modules
+dist
+dist-ssr
+*.local
 
-# ┃ Generated Workspaces
-# ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫ #
-
-## Visual Studio Code
-.vscode
-
-# ┃ System Files
-# ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫ #
-
-## macOS
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
 .DS_Store
-*.icloud
-.AppleDouble
-.LSOverride
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
-## Windows
-$RECYCLE.BIN/
-*.lnk
+# Python virtual environment
+.venv
+
+# Trained models
+public/model.pb

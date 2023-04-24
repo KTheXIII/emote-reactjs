@@ -4,7 +4,7 @@ import {
   useRef,
   useState
 } from 'react'
-import { infoIcon } from 'src/assets/icons'
+import { infoIcon } from '../assets/icons'
 
 import themeList from '../assets/theme.json'
 
